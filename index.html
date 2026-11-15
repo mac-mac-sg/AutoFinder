@@ -77,6 +77,80 @@
 @media(max-width:380px){.swipeCardPhoto{height:204px}.swipeDeck{min-height:505px}.swipeCardText{font-size:11px}.swipeAction{width:59px;height:59px;font-size:26px}.swipeAction small{font-size:9px}.swipeControls{gap:8px}.swipeFacts strong{font-size:12px}.swipeFacts>div{padding:0 4px}}
 @media(prefers-reduced-motion:reduce){.swipeCard,.swipeAction,.swipeProgressRail span{transition:none!important}}
 
+
+/* AutoFinder · Adaptive Glass Header V3 / Compact Editorial typography V1 */
+.nav#autoFinderNav{
+  background:rgba(10,30,39,.89);
+  border-bottom:1px solid rgba(176,243,226,.14);
+  -webkit-backdrop-filter:blur(24px) saturate(145%);
+  backdrop-filter:blur(24px) saturate(145%);
+  box-shadow:0 6px 24px rgba(3,19,24,.07);
+  isolation:isolate;
+  transition:background .24s ease,box-shadow .24s ease,border-color .24s ease;
+}
+.nav#autoFinderNav::before{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(115deg,rgba(155,239,217,.085),rgba(255,255,255,.017) 42%,rgba(143,232,219,.05));
+}
+.nav#autoFinderNav .navin{height:62px;transition:height .24s cubic-bezier(.2,.75,.2,1)}
+.nav#autoFinderNav .brand{font-family:Manrope,system-ui,sans-serif;font-size:15px;letter-spacing:-.035em;gap:9px;white-space:nowrap;transition:font-size .24s ease}
+.nav#autoFinderNav .brandicon{width:30px;height:30px;font-size:17px;border-radius:10px;background:rgba(113,238,204,.09);transition:width .24s ease,height .24s ease,font-size .24s ease}
+.nav#autoFinderNav .branddot{color:#8fe9d1;font-weight:900}
+.nav#autoFinderNav .navright{letter-spacing:.055em;font-size:10px;font-weight:800;color:#b6d2d2}
+body.header-collapsed .nav#autoFinderNav{background:rgba(9,27,36,.79);border-color:rgba(146,236,215,.22);box-shadow:0 10px 32px rgba(1,19,23,.15)}
+body.header-collapsed .nav#autoFinderNav .navin{height:52px}
+body.header-collapsed .nav#autoFinderNav .brand{font-size:14px}
+body.header-collapsed .nav#autoFinderNav .brandicon{width:25px;height:25px;font-size:14px}
+.hero.autoHero{padding:23px 0 17px;background:linear-gradient(130deg,#0b1c27 0%,#10333a 64%,#0d252e 100%);border-bottom:1px solid rgba(145,232,218,.1)}
+.hero.autoHero::before{inset:-180px -15% auto 36%;height:420px;background:radial-gradient(ellipse,rgba(17,144,124,.19),transparent 60%)}
+.hero.autoHero::after{width:360px;height:360px;top:-185px;right:4%;opacity:.55}
+.autoHeroGrid{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:22px}
+.autoHeroEyebrow{font-size:9px;letter-spacing:.15em;font-weight:850;color:#9ae8d3;display:flex;gap:9px;align-items:center}
+.autoHeroPulse,.autoHeroSmallDot{display:inline-block;background:#92e8cc;border-radius:50%;width:6px;height:6px;box-shadow:0 0 0 3px rgba(146,232,204,.09);flex:none}
+.autoHeroDivider{color:#578982;font-weight:400}
+.hero.autoHero h1{font-family:Manrope,system-ui,sans-serif;margin:10px 0 6px;font-size:clamp(28px,3vw,39px);line-height:1.16;max-width:none;letter-spacing:-.047em;font-weight:800}
+.hero.autoHero h1 em{color:#a6f2dd}
+.autoHeroDescription{font-size:13px;line-height:1.55;color:#bed1d1;margin:0;max-width:560px}
+.autoHeroAside{border:1px solid rgba(156,241,219,.18);background:rgba(225,255,245,.045);border-radius:17px;padding:12px 17px;min-width:106px;align-self:stretch;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.autoHeroAsideCaption{font-size:8px;letter-spacing:.12em;color:#9ec4bc;font-weight:800}
+.autoHeroAside strong{font-family:Manrope,system-ui,sans-serif;font-size:31px;line-height:1.04;color:#d5fff2;letter-spacing:-.06em;margin:3px 0}
+.autoHeroAsideUnit{font-size:10px;color:#b8d6ce}
+.autoHeroMeta{margin-top:16px;padding-top:11px;border-top:1px solid rgba(255,255,255,.11);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.autoHeroFoot{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.01em;color:#a9cac8}
+.autoHeroSmallDot{width:5px;height:5px;box-shadow:none}
+.autoHeroSeparator{opacity:.47}
+.hero.autoHero .heroSwipeButton{font-size:11px;font-weight:800;white-space:nowrap;border:1px solid rgba(143,232,209,.27);border-radius:999px;padding:7px 11px;text-decoration:none;color:#b6ffe5;background:rgba(74,207,171,.08);transition:background .2s,border-color .2s}
+.hero.autoHero .heroSwipeButton:hover{background:rgba(102,221,186,.17);border-color:rgba(179,246,225,.52);color:white}
+.hero.autoHero .heroSwipeButton span{margin-left:5px}
+@media(max-width:850px){
+  .autoHeroAside{display:none}
+  .hero.autoHero{padding:23px 0 16px}
+  .hero.autoHero h1{font-size:clamp(27px,4.1vw,37px)}
+}
+@media(max-width:640px){
+  .nav#autoFinderNav .navin{height:57px}
+  body.header-collapsed .nav#autoFinderNav .navin{height:49px}
+  .nav#autoFinderNav .brand{font-size:14px;gap:8px}
+  body.header-collapsed .nav#autoFinderNav .brand{font-size:13px}
+  .nav#autoFinderNav .brandicon{width:27px;height:27px;font-size:15px}
+  body.header-collapsed .nav#autoFinderNav .brandicon{width:24px;height:24px;font-size:13px}
+  .hero.autoHero{padding:18px 0 13px}
+  .autoHeroEyebrow{font-size:9px;letter-spacing:.11em;gap:7px}
+  .hero.autoHero h1{font-size:clamp(25px,6.5vw,30px);max-width:100%;margin:8px 0 5px;letter-spacing:-.045em}
+  .autoHeroDescription{font-size:12px;line-height:1.45}
+  .autoHeroMeta{margin-top:12px;padding-top:9px}
+  .autoHeroFoot{font-size:10px;gap:6px}
+  .hero.autoHero .heroSwipeButton{font-size:10px;padding:6px 9px}
+}
+@media(max-width:350px){
+  .autoHeroSeparator{display:none}
+  .autoHeroFoot{font-size:9px;gap:5px}
+  .hero.autoHero .heroSwipeButton{font-size:9px;padding:6px 7px}
+}
+@media(prefers-reduced-motion:reduce){
+  .nav#autoFinderNav,.nav#autoFinderNav .navin,.nav#autoFinderNav .brand,.nav#autoFinderNav .brandicon{transition:none}
+}
+
 </style>
 
 <!-- PWA: installability, iOS homescreen support, original mobile-first app preserved -->
@@ -91,8 +165,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="./pwa.css">
 </head><body>
-<header class="nav"><div class="shell navin"><a class="brand" href="#top"><span class="brandicon">↗</span> PHEV <span style="color:#7ae2cc">ATLAS</span></a><nav class="desktopnav" id="navLinks"></nav><div class="headerExtras"><span class="navright">RECHERCHE / 15.11.2026</span><button type="button" id="pwaInstallButton" class="pwaInstallButton" aria-label="PHEV Atlas als App installieren" title="Als App installieren"><span aria-hidden="true">↓</span> <span class="pwaButtonLabel">App</span></button></div></div></header>
-<div id="top" class="hero"><div class="shell"><div class="eyebrow">Eure nächste Fahrzeugentscheidung</div><h1>19 Fahrzeuge.<br><em>Ein guter Entscheid.</em></h1><div class="heroCopy heroCopy"><p class="heroCopy">15 bewährte Kandidaten plus Leapmotor, Geely, Chery und Mazda CX-30 – mit Foto-Galerien, unabhängigen Tests und Schweizer Marktpreisen.</p></div><div class="chips"><span class="chip">CHF 20’000–30’000</span><span class="chip">15–25 km / Tag</span><span class="chip">Laden zu Hause</span><span class="chip">St. Gallen & Lenzerheide</span></div><div class="herofoot"><span>19 Modelle · 60 Quellen · unabhängige Tests + Herstellerdaten</span><button type="button" id="heroSwipeLink" class="heroSwipeButton">♡ Jetzt swipen</button></div></div></div>
+<header class="nav" id="autoFinderNav"><div class="shell navin"><a class="brand" href="#top" aria-label="AutoFinder – zum Anfang"><span class="brandicon" aria-hidden="true">↗</span><span class="brandword">AutoFinder<span class="branddot">.</span></span></a><nav class="desktopnav" id="navLinks" aria-label="Hauptnavigation"></nav><div class="headerExtras"><span class="navright">19 MODELLE · 60 QUELLEN</span><button type="button" id="pwaInstallButton" class="pwaInstallButton" aria-label="AutoFinder als App installieren" title="Als App installieren"><span aria-hidden="true">↓</span> <span class="pwaButtonLabel">App</span></button></div></div></header>
+<div id="top" class="hero autoHero"><div class="shell"><div class="autoHeroGrid"><div class="autoHeroMain"><div class="autoHeroEyebrow"><span class="autoHeroPulse" aria-hidden="true"></span> AUTOFINDER <span class="autoHeroDivider">/</span> 19 MODELLE</div><h1>Dein Auto. <em>Deine Wahl.</em></h1><p class="autoHeroDescription">Entdecken, vergleichen und Favoriten finden.</p></div><div class="autoHeroAside" aria-hidden="true"><span class="autoHeroAsideCaption">DEIN VERGLEICH</span><strong>19</strong><span class="autoHeroAsideUnit">Fahrzeuge</span></div></div><div class="autoHeroMeta"><span class="autoHeroFoot"><span class="autoHeroSmallDot" aria-hidden="true"></span> 19 Modelle im Vergleich <span class="autoHeroSeparator">·</span> 60 Quellen</span><button type="button" id="heroSwipeLink" class="heroSwipeButton">♡ Favoriten küren <span aria-hidden="true">↗</span></button></div></div></div>
 <main class="main shell">
 <section class="page" id="page-discover"><div class="featureline"><article class="insight"><span class="small">Kombi-Favoriten</span><strong>Octavia · Superb · Astra</strong><p>Die klassische Kombiform und viel Gepäckraum sind für eure Anforderungen besonders relevant.</p></article><article class="insight"><span class="small">Mehr E-Reichweite</span><strong>BYD · MG · JAC</strong><p>Rund 100 km WLTP elektrisch bei jüngeren Autos. Beim MG existiert sogar ein 35’000-km-Dauertest.</p></article><article class="insight"><span class="small">Sicherheits- und Kaufcheck</span><strong>Ford Kuga: VIN-Rückrufstatus</strong><p>Ford Schweiz informiert über ein Hochvolt-Batterierisiko. Beim Tucson im Winter die Heizung im E-Modus testen.</p></article></div><div class="sectionhead"><div><h2>Die Fahrzeuge</h2><p>Nach Bauform filtern, Details öffnen und bis zu drei Fahrzeuge für den direkten Vergleich auswählen. Die erste Aufnahme pro Fahrzeug ist wieder bewusst als werblicheres Hero-/Pressebild priorisiert; Innenraum- und Nutzwertfotos folgen in der Galerie.</p></div></div><div class="toolbar"><div class="segment" id="bodyFilter"><button data-body="Alle" class="active">Alle 18</button><button data-body="Kombi">Kombis</button><button data-body="SUV">SUVs</button></div><div class="driveFilter"><label for="driveSelect">Antrieb</label><select id="driveSelect" aria-label="Antriebsart auswählen"><option value="Alle">Alle</option><option value="PHEV">Plug-in-Hybrid</option><option value="REEV">Range-Extender</option><option value="MHEV">Mildhybrid (ohne Laden)</option></select></div><div class="searchbox"><input id="searchCars" type="search" placeholder="Marke oder Modell suchen…" aria-label="Fahrzeuge nach Name suchen"></div><div class="sortbox">Sortieren <select id="sortSelect" aria-label="Sortierung"><option value="fit">Eignung für euch</option><option value="price">Preis aufsteigend</option><option value="boot">Kofferraum</option><option value="range">E-Reichweite</option></select></div></div><div id="resultsnote" class="resultsnote"></div><div class="cargrid" id="cargrid"></div></section>
 
@@ -319,5 +393,19 @@ document.addEventListener('keydown',e=>{if(state.page!=='swipe'||state.modal||st
 $('#modalbg').addEventListener('click',e=>{if(e.target.id==='modalbg')closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state.modal)closeModal()});$('#sortSelect').addEventListener('change',e=>{state.sort=e.target.value;renderCards()});document.querySelectorAll('[data-body]').forEach(el=>el.addEventListener('click',()=>{state.body=el.dataset.body;document.querySelectorAll('[data-body]').forEach(b=>b.classList.toggle('active',b===el));renderCards()}));$('#dailyRange').addEventListener('input',e=>{state.daily=Number(e.target.value);renderProfile()});document.querySelectorAll('[data-season]').forEach(el=>el.addEventListener('click',()=>{state.season=el.dataset.season;renderProfile()}));$('#driveSelect').addEventListener('change',e=>{state.drive=e.target.value;renderCards()});$('#searchCars').addEventListener('input',e=>{state.query=e.target.value.trim();renderCards()});renderNav();renderCards();renderSources();
 /* Load optional Google Fonts after the app is interactive, not as a blocking CSS import. */
 const fontStyle=document.createElement('link');fontStyle.rel='stylesheet';fontStyle.href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap';document.head.appendChild(fontStyle);
+
+/* Compact glass navigation once the editorial introduction leaves focus. */
+(function setupAdaptiveAutoFinderHeader(){
+  let scheduled=false;
+  const update=()=>{
+    document.body.classList.toggle('header-collapsed',window.scrollY>72);
+    scheduled=false;
+  };
+  window.addEventListener('scroll',()=>{
+    if(!scheduled){scheduled=true;window.requestAnimationFrame(update)}
+  },{passive:true});
+  window.addEventListener('pageshow',update);
+  update();
+})();
 </script><script defer src="./pwa.js"></script>
 </body></html>
