@@ -1,0 +1,9 @@
+
+/* AutoFinder image interactions and 6-photo gallery */
+#cargrid .carcard .cover {cursor:pointer;}
+#cargrid .carcard .cover:hover > img {filter:brightness(.95);transform:scale(1.025);}
+#cargrid .carcard .cover > img {transition:transform .25s ease,filter .25s ease;}
+#cargrid .carcard .cover:focus-visible {outline:3px solid #72e1c4;outline-offset:-3px;}
+#activeSwipeCard .swipeCardPhoto {cursor:pointer;}
+#activeSwipeCard .swipeCardPhoto:focus-visible {outline:3px solid #76e8c9;outline-offset:-3px;}
+@media(prefers-reduced-motion:reduce){#cargrid .carcard .cover > img {transition:none;}}
