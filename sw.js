@@ -1,7 +1,7 @@
 /* PHEV Atlas service worker: cache application shell, network-first updates. */
-const VERSION='phev-atlas-v1-20261115';
+const VERSION='phev-atlas-v2-20261116-gallery-score';
 const CORE=[
-  './', './index.html', './manifest.webmanifest', './pwa.css', './pwa.js', './offline.html',
+  './', './index.html', './manifest.webmanifest', './pwa.css', './pwa.js', './atlas-enhancements.css', './atlas-enhancements.js', './offline.html',
   './icons/favicon.svg','./icons/icon-192.png','./icons/icon-512.png',
   './icons/icon-maskable-512.png','./icons/apple-touch-icon.png'
 ];
