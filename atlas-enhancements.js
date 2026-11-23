@@ -85,7 +85,7 @@
     return [
       {key:"price",label:"Kaufpreis",score:clamp(12-midpoint/5000,2,10),basis:"Suchpreis-Mittelwert "+currency(midpoint)+". Je günstiger die Orientierungsspanne, desto mehr Punkte.",formula:"12 − (Suchpreis / 5’000), begrenzt auf 2–10"},
       {key:"boot",label:"Kofferraum",score:clamp((c.boot-380)/22,3,10),basis:c.boot+" Liter laut Modellangabe (PHEV-Version, wenn verfügbar). Form und Ladeboden sind nicht separat bewertet.",formula:"(Liter − 380) / 22, begrenzt auf 3–10"},
-      {key:"electric",label:"Elektrischer Alltag",score:c.powertrain==="MHEV"?0:clamp(5+c.range/25,4,10),basis:c.powertrain==="MHEV"?"Mildhybrid: kein rein elektrischer Fahrbetrieb möglich.":c.range+" km WLTP. Winterreichweite und Batteriealter nicht direkt eingepreist.",formula:c.powertrain==="MHEV"?"0 Punkte (kein Stecker-/E-Fahrbetrieb)":"5 + (WLTP-km / 25), begrenzt auf 4–10"},
+      {key:"electric",label:"Elektrischer Alltag",score:["MHEV","HEV"].includes(c.powertrain)?0:clamp(5+c.range/25,4,10),basis:c.powertrain==="MHEV"?"Mildhybrid: keine planbare rein elektrische Tagesreichweite.":c.powertrain==="HEV"?"Vollhybrid ohne Ladestecker: kurze automatische E-Phasen, aber keine planbare elektrische Tagesreichweite.":c.range+" km WLTP. Winterreichweite und Batteriealter nicht direkt eingepreist.",formula:["MHEV","HEV"].includes(c.powertrain)?"0 Punkte (nicht extern ladbar)":"5 + (WLTP-km / 25), begrenzt auf 4–10"},
       {key:"evidence",label:"Risiko & Reife",score:Number(c.evidence),basis:"Redaktionelle Einschätzung der Erfahrungs-, Test- und Risikolage. Keine amtliche Zuverlässigkeits- oder Rückrufstatistik.",formula:"Redaktioneller Ausgangswert"}
     ];
   };
