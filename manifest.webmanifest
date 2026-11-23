@@ -2,7 +2,7 @@
   "id": "./index.html",
   "name": "PHEV Atlas – Euer Fahrzeugvergleich",
   "short_name": "PHEV Atlas",
-  "description": "19 Fahrzeuge vergleichen, Tests lesen und Swipe-Favoriten aufbauen. Optimiert für die Schweiz.",
+  "description": "21 Fahrzeuge vergleichen: PHEV, Range-Extender, Voll- und Mildhybrid. Tests, Bilder und Swipe-Favoriten für die Schweiz.",
   "lang": "de-CH",
   "start_url": "./index.html",
   "scope": "./",
